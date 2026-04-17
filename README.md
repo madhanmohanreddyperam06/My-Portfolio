@@ -1,12 +1,110 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. This project showcases my professional profile, including education, skills, experience, projects, and contact information.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Fully responsive layout that works seamlessly on all devices
+- **Modern UI**: Clean and modern interface built with Tailwind CSS
+- **Smooth Animations**: Engaging animations using Framer Motion
+- **Interactive Components**: Dynamic and interactive user interface elements
+- **Contact Form**: Functional contact form with EmailJS integration
+- **Resume Download**: Direct resume download functionality
+- **Loading Animation**: Professional loading screen for better user experience
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 19
+- **Build Tool**: Vite 6
+- **Styling**: Tailwind CSS 3
+- **Animations**: Framer Motion 12
+- **Routing**: React Router DOM 7
+- **Email Service**: EmailJS
+- **Deployment**: Vercel
+
+## 📁 Project Structure
+
+```bash
+src/
+├── components/
+│   ├── Header.jsx          # Navigation header
+│   ├── Hero.jsx            # Hero section
+│   ├── Education.jsx       # Education timeline
+│   ├── Skills.jsx          # Skills showcase
+│   ├── Experience.jsx      # Work experience
+│   ├── Projects.jsx        # Projects portfolio
+│   ├── Contact.jsx         # Contact form
+│   ├── Footer.jsx          # Footer section
+│   ├── Loader.jsx          # Loading animation
+│   ├── ResumeRedirect.jsx  # Resume download redirect
+│   ├── Avatar.jsx          # Avatar component
+│   └── DotMatrix.jsx       # Background decoration
+├── App.jsx                 # Main application component
+├── main.jsx               # Application entry point
+└── assets/                # Static assets
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/madhanmohanreddyperam06/Portfolio-NB.git
+cd Portfolio-NB
+```
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+1. Create a `.env` file in the root directory and add your EmailJS credentials:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+1. Start the development server:
+
+```bash
+npm run dev
+```
+
+1. Open your browser and navigate to `http://localhost:5173`
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint to check for code issues
+
+## 🌐 Deployment
+
+This project is configured for easy deployment on Vercel. The `vercel.json` file is included for optimal deployment settings.
+
+## 📧 Contact
+
+The contact form is powered by EmailJS. Make sure to configure your EmailJS account and update the environment variables accordingly.
+
+## 🤝 Contributing
+
+Feel free to fork this project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+Built with ❤️ using React, Vite, and Tailwind CSS

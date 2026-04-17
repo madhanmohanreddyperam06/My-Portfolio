@@ -14,7 +14,7 @@ const Education = () => {
     },
     {
       institution: "Narayana Junior College, Cuddapah, Andhra Pradesh | 2020-2022",
-      degree: "Intermediate",
+      degree: "Class XII",
       field: "MPC",
       period: "Percentage : 84.2%",
     },
@@ -27,9 +27,9 @@ const Education = () => {
   ];
 
   const achievements = [
-    "2x Gold badge holder -Hackerrank(Python)",
+    "2x Python Gold Badge holder -Hackerrank",
     "Finalist in National Level Hackathon -IBM",
-    "Published an IEEE article - Smart College Helpdesk Assistant using Machine Learning & NLP",
+    "Published an IEEE article -Smart College Helpdesk Assistant using Machine Learning & NLP",
     "Certified Full Stack Web Developer -Future Interns",
     "Certified AI Developer Intern -Viswam AI",
     "Secured 89 Percentile in JEE MAINS",
@@ -60,34 +60,40 @@ const Education = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h4 className="font-mono text-sm text-muted mb-2">BACKGROUND</h4>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Education & Achievements</h2>
+          <h4 className="font-serif text-sm text-muted mb-2 uppercase tracking-wider">BACKGROUND</h4>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-wider">EDUCATION & ACHIEVEMENTS</h2>
           <div className="w-16 h-[2px] bg-light opacity-50"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           <motion.div
             className="md:col-span-2"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <h3 className="text-xl font-medium mb-6 flex items-center">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 flex items-center">
               <div className="w-4 h-4 border border-light mr-3"></div>
-              Education
+              <span className="font-bold uppercase">Education</span>
             </h3>
 
             <div className="space-y-8">
               {education.map((edu, i) => (
                 <motion.div
                   key={i}
-                  className="border-l-2 border-muted border-opacity-30 pl-6 relative"
+                  className="border-l-2 border-muted border-opacity-30 pl-4 sm:pl-6 relative"
                   variants={itemVariants}
                 >
                   <div className="absolute w-3 h-3 bg-primary border border-light rounded-full -left-[7px] top-1"></div>
-                  <h4 className="text-lg font-medium mb-1">{edu.institution}</h4>
-                  <p className="text-muted mb-1">{edu.degree} {edu.field && `- ${edu.field}`}</p>
-                  {edu.period && <p className="text-sm font-mono text-light opacity-70">{edu.period}</p>}
+                  <h4 className="text-base sm:text-lg font-medium mb-1">{edu.institution}</h4>
+                  <p className="text-sm sm:text-base text-muted mb-1">{edu.degree} {edu.field && edu.field.includes('(') ? (
+                    <>
+                      {edu.field.split('(')[0]} ({edu.field.split('(')[1].replace(')', '')})
+                    </>
+                  ) : edu.field && ['MPC', 'SSC'].includes(edu.field) ? (
+                    <span>- {edu.field}</span>
+                  ) : edu.field && <span>- {edu.field}</span>}</p>
+                  {edu.period && <p className="text-xs sm:text-sm font-serif text-light opacity-70">{edu.period}</p>}
                 </motion.div>
               ))}
             </div>
@@ -98,9 +104,9 @@ const Education = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <h3 className="text-xl font-medium mb-6 flex items-center">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 flex items-center">
               <div className="w-4 h-4 border border-light mr-3"></div>
-              Achievements
+              <span className="font-bold uppercase">Achievements</span>
             </h3>
 
             <ul className="space-y-4">
@@ -111,17 +117,50 @@ const Education = () => {
                   variants={itemVariants}
                 >
                   <span className="text-light mt-1 mr-2 opacity-60">⁕</span>
-                  <span>{achievement}</span>
+                  <span>{achievement.includes('-') ? (
+                    <>
+                      {achievement.split('-').map((part, index) => (
+                        <span key={index}>
+                          {index === 0 ? part : <span className="text-muted">{part}</span>}
+                          {index < achievement.split('-').length - 1 && ' - '}
+                        </span>
+                      ))}
+                    </>
+                  ) : achievement.includes('JEE MAINS') ? (
+                    <>
+                      {achievement.split(' ').map((part, index) => {
+                        const isTarget = part === 'JEE' || part === 'MAINS';
+                        return (
+                          <span key={index}>
+                            {isTarget ? <span className="text-muted">{part}</span> : part}
+                            {index < achievement.split(' ').length - 1 && ' '}
+                          </span>
+                        );
+                      })}
+                    </>
+                  ) : achievement.includes('EAPCET') ? (
+                    <>
+                      {achievement.split(' ').map((part, index) => {
+                        const isTarget = part === 'EAPCET';
+                        return (
+                          <span key={index}>
+                            {isTarget ? <span className="text-muted">{part}</span> : part}
+                            {index < achievement.split(' ').length - 1 && ' '}
+                          </span>
+                        );
+                      })}
+                    </>
+                  ) : achievement}</span>
                 </motion.li>
               ))}
             </ul>
 
             <motion.div
-              className="mt-8 p-4 border border-muted border-opacity-20 bg-secondary bg-opacity-30"
+              className="mt-6 sm:mt-8 p-3 sm:p-4 border border-muted border-opacity-20 bg-secondary bg-opacity-30"
               variants={itemVariants}
             >
-              <h4 className="text-sm font-medium mb-2">Continuous Learning</h4>
-              <p className="text-muted text-sm">
+              <h4 className="text-xs sm:text-sm font-medium mb-2">Continuous Learning</h4>
+              <p className="text-xs sm:text-sm text-muted">
                 Always exploring new technologies and participating in hackathons
                 to expand my knowledge and practical experience.
               </p>

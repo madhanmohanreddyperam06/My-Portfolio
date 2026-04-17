@@ -45,11 +45,12 @@ const Contact = () => {
     const formattedDate = now.toISOString().replace('T', ' ').substring(0, 19);
 
     // EmailJS configuration
-    const serviceId = import.meta.env.VITE_SERVICE_ID;
-    const templateId = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+    const serviceId = import.meta.env.VITE_SERVICE_ID || 'service_z9inuic';
+    const templateId = import.meta.env.VITE_TEMPLATE_ID || 'template_rpjbcyh';
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY || 'hhMiycuybhPQ-aU8S';
 
     // Initialize EmailJS with your public key
+    console.log('Initializing EmailJS with:', { serviceId, templateId, publicKey });
     emailjs.init(publicKey);
 
     // Prepare form data for EmailJS
@@ -102,12 +103,12 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h4 className="font-mono text-sm text-muted mb-2">GET IN TOUCH</h4>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Me</h2>
+          <h4 className="font-serif text-sm text-muted mb-2">GET IN TOUCH</h4>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-wider">CONTACT ME</h2>
           <div className="w-16 h-[2px] bg-light opacity-50"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -130,21 +131,21 @@ const Contact = () => {
 
             <motion.div
               variants={containerVariants}
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6"
             >
               <motion.div
                 variants={itemVariants}
                 className="flex items-start"
               >
-                <div className="mr-4 p-2 border border-muted border-opacity-30">
+                <div className="mr-3 sm:mr-4 p-2 border border-muted border-opacity-30 flex-shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="#F5F5F5" strokeOpacity="0.8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <div>
                   <h4 className="font-medium text-sm mb-1">Email</h4>
-                  <a href="mailto : madhanmohanreddyperam06@gmail.com" className="text-muted hover:text-light transition-colors">
-                    madhanmohanreddyperam06gmail.com
+                  <a href="mailto:madhanmohanreddyperam06@gmail.com" className="text-sm sm:text-base text-muted hover:text-light transition-colors break-all">
+                    madhanmohanreddyperam06@gmail.com
                   </a>
                 </div>
               </motion.div>
@@ -153,14 +154,14 @@ const Contact = () => {
                 variants={itemVariants}
                 className="flex items-start"
               >
-                <div className="mr-4 p-2 border border-muted border-opacity-30">
+                <div className="mr-3 sm:mr-4 p-2 border border-muted border-opacity-30 flex-shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 4H9L11 9L8.5 10.5C9.57 12.6715 11.3285 14.43 13.5 15.5L15 13L20 15V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21C14.0993 20.763 10.4202 19.1065 7.65683 16.3432C4.8935 13.5798 3.23705 9.90074 3 6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4" stroke="#F5F5F5" strokeOpacity="0.8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <div>
                   <h4 className="font-medium text-sm mb-1">Phone</h4>
-                  <a href="call : +91 9110395993" className="text-muted hover:text-light transition-colors">
+                  <a href="call : +91 9110395993" className="text-sm sm:text-base text-muted hover:text-light transition-colors">
                     +91 9110395993
                   </a>
                 </div>
@@ -170,7 +171,7 @@ const Contact = () => {
                 variants={itemVariants}
                 className="flex items-start"
               >
-                <div className="mr-4 p-2 border border-muted border-opacity-30">
+                <div className="mr-3 sm:mr-4 p-2 border border-muted border-opacity-30 flex-shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 19C9 20.1046 7.65685 21 6 21C4.34315 21 3 20.1046 3 19C3 17.8954 4.34315 17 6 17C7.65685 17 9 17.8954 9 19ZM9 19V5C9 3.89543 9.89543 3 11 3H21C22.1046 3 23 3.89543 23 5V19C23 20.1046 22.1046 21 21 21M21 21C19.3431 21 18 20.1046 18 19C18 17.8954 19.3431 17 21 17C22.6569 17 24 17.8954 24 19C24 20.1046 22.6569 21 21 21ZM15 19C15 20.1046 13.6569 21 12 21C10.3431 21 9 20.1046 9 19C9 17.8954 10.3431 17 12 17C13.6569 17 15 17.8954 15 19Z" stroke="#F5F5F5" strokeOpacity="0.8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -213,46 +214,52 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <form ref={formRef} onSubmit={handleSubmit} className="bg-primary bg-opacity-40 border border-muted border-opacity-10 p-6">
-              <h3 className="text-xl font-medium mb-6">Send a Message</h3>
+            <form ref={formRef} onSubmit={handleSubmit} className="bg-primary bg-opacity-40 border border-muted border-opacity-10 p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-medium mb-4 sm:mb-6">Send a Message</h3>
 
               <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full bg-secondary bg-opacity-40 border border-muted border-opacity-30 p-3 text-light focus:outline-none focus:border-light"
-                  required
-                />
+                <div className="red-line-hover relative">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full bg-secondary bg-opacity-40 border border-muted border-opacity-30 p-3 text-light focus:outline-none focus:border-light text-sm sm:text-base"
+                    required
+                  />
+                </div>
               </div>
 
               <div className="mb-4">
                 <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full bg-secondary bg-opacity-40 border border-muted border-opacity-30 p-3 text-light focus:outline-none focus:border-light"
-                  required
-                />
+                <div className="red-line-hover relative">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full bg-secondary bg-opacity-40 border border-muted border-opacity-30 p-3 text-light focus:outline-none focus:border-light text-sm sm:text-base"
+                    required
+                  />
+                </div>
               </div>
 
               <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="5"
-                  className="w-full bg-secondary bg-opacity-40 border border-muted border-opacity-30 p-3 text-light focus:outline-none focus:border-light"
-                  required
-                ></textarea>
+                <div className="red-line-hover relative">
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="5"
+                    className="w-full bg-secondary bg-opacity-40 border border-muted border-opacity-30 p-3 text-light focus:outline-none focus:border-light text-sm sm:text-base"
+                    required
+                  ></textarea>
+                </div>
               </div>
 
               <button
@@ -264,13 +271,13 @@ const Contact = () => {
               </button>
 
               {status.submitted && (
-                <div className="mt-4 p-3 bg-green-500 bg-opacity-20 border border-green-500 text-green-300 text-center">
+                <div className="mt-4 p-3 bg-orange-500 bg-opacity-20 border border-orange-500 text-orange-300 text-center">
                   Message sent successfully!
                 </div>
               )}
 
               {status.error && (
-                <div className="mt-4 p-3 bg-red-500 bg-opacity-20 border border-red-500 text-red-300 text-center">
+                <div className="mt-4 p-3 bg-red-500 bg-opacity-20 border border-red-500 text-center">
                   {status.error}
                 </div>
               )}

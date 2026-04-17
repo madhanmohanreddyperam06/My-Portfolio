@@ -7,6 +7,7 @@ import Hero from './components/Hero.jsx';
 import Projects from './components/Projects.jsx';
 import Skills from './components/Skills.jsx';
 import Education from './components/Education.jsx';
+import Experience from './components/Experience.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Loader from './components/Loader.jsx';
@@ -42,9 +43,10 @@ function App() {
                   <Header />
                   <main>
                     <Hero />
-                    <Projects />
-                    <Skills />
                     <Education />
+                    <Skills />
+                    <Experience />
+                    <Projects />
                     <Contact />
                   </main>
                   <Footer />
