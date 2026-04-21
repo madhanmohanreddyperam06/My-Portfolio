@@ -8,9 +8,9 @@ const Education = () => {
   const education = [
     {
       institution: "Kalasalingam University, Krishnankoil, Tamil Nadu | 2022-2026",
-      degree: "B.Tech",
-      field: "Computer Science and Engineering (CSE)",
-      period: "CGPA : 8.13",
+      degree: "B.Tech -",
+      field: "Computer Science and Engineering (AI & ML)",
+      period: "CGPA : 8.14",
     },
     {
       institution: "Narayana Junior College, Cuddapah, Andhra Pradesh | 2020-2022",

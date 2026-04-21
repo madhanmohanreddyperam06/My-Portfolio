@@ -1,16 +1,21 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. This project showcases my professional profile, including education, skills, experience, projects, and contact information.
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. This project showcases my professional profile, including education, skills, experience, projects, and contact information with interactive design elements and smooth animations.
 
-## 🚀 Features
+## Features
 
-- **Responsive Design**: Fully responsive layout that works seamlessly on all devices
-- **Modern UI**: Clean and modern interface built with Tailwind CSS
-- **Smooth Animations**: Engaging animations using Framer Motion
-- **Interactive Components**: Dynamic and interactive user interface elements
-- **Contact Form**: Functional contact form with EmailJS integration
+- **Responsive Design**: Fully responsive layout that works seamlessly on all devices (mobile, tablet, desktop)
+- **Modern UI**: Clean and professional interface with dark theme and gradient accents
+- **Interactive Hero Section**: Animated background elements and social media links with hover effects
+- **Education Timeline**: Interactive timeline showing academic journey with achievements
+- **Skills Showcase**: Categorized skill display with technology icons and proficiency indicators
+- **Professional Experience**: Work experience timeline with expandable details and certificate viewing
+- **Projects Portfolio**: Interactive project showcase with filtering and detailed project information
+- **Contact Form**: Functional contact form with EmailJS integration and real-time validation
 - **Resume Download**: Direct resume download functionality
 - **Loading Animation**: Professional loading screen for better user experience
+- **Smooth Scroll Animations**: Section-based animations with Framer Motion
+- **Social Media Integration**: Links to GitHub, LinkedIn, HackerRank, and GUVI profiles
 
 ## 🛠️ Tech Stack
 
@@ -20,31 +25,31 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 - **Animations**: Framer Motion 12
 - **Routing**: React Router DOM 7
 - **Email Service**: EmailJS
+- **Icons**: Custom SVG icons and technology logos
 - **Deployment**: Vercel
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 src/
-├── components/
-│   ├── Header.jsx          # Navigation header
-│   ├── Hero.jsx            # Hero section
-│   ├── Education.jsx       # Education timeline
-│   ├── Skills.jsx          # Skills showcase
-│   ├── Experience.jsx      # Work experience
-│   ├── Projects.jsx        # Projects portfolio
-│   ├── Contact.jsx         # Contact form
-│   ├── Footer.jsx          # Footer section
-│   ├── Loader.jsx          # Loading animation
-│   ├── ResumeRedirect.jsx  # Resume download redirect
-│   ├── Avatar.jsx          # Avatar component
-│   └── DotMatrix.jsx       # Background decoration
+components/
+  Header.jsx          # Navigation header with smooth scroll
+  Hero.jsx            # Hero section with animated background and social links
+  Education.jsx       # Education timeline with achievements
+  Skills.jsx          # Skills showcase with technology categories
+  Experience.jsx      # Work experience with certificates
+  Projects.jsx        # Projects portfolio with GitHub links
+  Contact.jsx         # Contact form with EmailJS integration
+  Footer.jsx          # Footer section
+  Loader.jsx          # Loading animation
+  ResumeRedirect.jsx  # Resume download redirect
+  Avatar.jsx          # Avatar component
 ├── App.jsx                 # Main application component
 ├── main.jsx               # Application entry point
 └── assets/                # Static assets
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -56,8 +61,8 @@ src/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/madhanmohanreddyperam06/Portfolio-NB.git
-cd Portfolio-NB
+git clone https://github.com/madhanmohanreddyperam06/My-Portfolio.git
+cd My-Portfolio
 ```
 
 1. Install dependencies:
@@ -89,9 +94,22 @@ npm run dev
 - `npm run preview` - Preview the production build
 - `npm run lint` - Run ESLint to check for code issues
 
-## 🌐 Deployment
+## Deployment
 
-This project is configured for easy deployment on Vercel. The `vercel.json` file is included for optimal deployment settings.
+This project can be deployed on any static hosting platform. The build process creates optimized static files in the `dist` folder.
+
+### Popular Deployment Options
+
+- **Vercel**: Connect your GitHub repository for automatic deployments
+- **Netlify**: Drag and drop the `dist` folder or connect Git
+- **GitHub Pages**: Use GitHub Actions for automatic deployment
+- **Firebase Hosting**: Deploy with Firebase CLI
+
+### Build for Production
+
+```bash
+npm run build
+```
 
 ## 📧 Contact
 

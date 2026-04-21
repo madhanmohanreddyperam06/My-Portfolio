@@ -49,10 +49,10 @@ const Projects = () => {
         "Campus Finder - Smart Educational Institution Discovery Platform using GenAI",
       description:
         "An advanced educational platform that revolutionizes self-paced learning through AI-powered content organization and generation. StudySphere allows users to curate and structure courses on any topic with intelligent assistance, automatically generating customized flashcards, comprehensive notes, and interactive quizzes tailored to individual learning preferences. The integration with Google Gemini API enables sophisticated content summarization and knowledge extraction, creating a personalized learning experience that adapts to users' comprehension levels and learning styles.",
-      tech: ["React", "Next.js", "TailwindCSS", "TypeScript", "Generative AI"],
+      tech: ["React", "Next.js", "Generative AI", "TailwindCSS", "TypeScript"],
       image: "/images/studysphere-preview.png",
-      liveLink: "https://hackthon-six.vercel.app/",
-      githubLink: "",
+      liveLink: "",
+      githubLink: "https://github.com/madhanmohanreddyperam06/Campus-Finder.git",
       highlights: [
         "Automatic flashcards & notes generation",
         "On-the-fly quizzes",
@@ -108,6 +108,22 @@ const Projects = () => {
         "Detailed product pages with image galleries and specifications",
         "Complete checkout process with form validation",
         "Order history, tracking, and confirmation pages",
+      ],
+    },
+    {
+      title: "BookMyDoctor - Doctor Appointment System",
+      description: "A comprehensive hospital appointment management system supporting Admin, Doctor, and Patient workflows with strict Online/Offline mode separation.",
+      tech: ["Python", "Flask", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
+      image: "/images/whistle-counter-preview.png",
+      liveLink: "",
+      githubLink: "https://github.com/madhanmohanreddyperam06/Doctor-Appointment-System.git",
+      highlights: [
+        "Separate dashboards and functionalities for Admin, Doctor, and Patient with secure access control",
+        "Real-time analytics for appointments, revenue, and user management with full system monitoring",
+        "Easily manage doctors, shifts, availability, and consultation modes (Online/Offline)",
+        "Time-based appointment scheduling with token generation for efficient patient flow",
+        "Doctors can manage diagnoses, prescriptions, and follow-ups digitally",
+        "Video consultation links for online visits and automatic clinic details for offline appointments",
       ],
     },
   ];

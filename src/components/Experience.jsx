@@ -86,7 +86,7 @@ const Experience = () => {
         issuer: "Matrimony.com",
         date: "December 2025",
         image: null,
-        pdf: "/Full Stack Development.pdf",
+        pdf: "/Matrimony_Certificate.pdf",
         description: "Certificate of completion for Full Stack Developer Trainee program at Matrimony.com, demonstrating proficiency in web development technologies and contribution to real-world projects."
       }
     },

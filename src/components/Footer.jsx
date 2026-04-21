@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary py-8 sm:py-12 border-t border-muted border-opacity-20">
+    <footer className="hidden md:block bg-primary py-8 sm:py-12 border-t border-muted border-opacity-20">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center justify-between mb-8">
           <motion.div
