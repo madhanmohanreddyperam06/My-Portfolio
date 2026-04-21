@@ -160,7 +160,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium text-sm mb-1">Phone</h4>
+                  <h4 className="font-medium text-sm mb-1">Mobile</h4>
                   <a href="call : +91 9110395993" className="text-sm sm:text-base text-muted hover:text-light transition-colors">
                     +91 9110395993
                   </a>

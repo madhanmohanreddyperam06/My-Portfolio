@@ -27,13 +27,15 @@ const Education = () => {
   ];
 
   const achievements = [
-    "2x Python Gold Badge holder -Hackerrank",
+    "Python Gold Badge holder -Hackerrank",
     "Finalist in National Level Hackathon -IBM",
-    "Published an IEEE article -Smart College Helpdesk Assistant using Machine Learning & NLP",
+    "Certified Full Stack Developer -Matrimony.com",
     "Certified Full Stack Web Developer -Future Interns",
     "Certified AI Developer Intern -Viswam AI",
     "Secured 89 Percentile in JEE MAINS",
     "Achieved 17463 Rank in EAPCET",
+    "Published an IEEE article at ICISS 2026 -Smart College Helpdesk Assistant using Machine Learning & NLP",
+    "Published an IEEE article at ICCiEST 2026 -Smart Educational Institution Discovery Platform using Generative AI",
   ];
 
   const containerVariants = {

@@ -153,19 +153,6 @@ const Hero = () => {
         {/* Mobile Profile Picture - Only visible on mobile */}
         <div className="flex justify-center mb-6 md:hidden">
           <div className="relative">
-            {/* Animated Glow Effect */}
-            <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl"
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 0.8, 0.5]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
 
             {/* Animated White Circle */}
             <motion.div
@@ -218,10 +205,11 @@ const Hero = () => {
             >
               <AnimatePresence mode="wait">
                 <motion.img
-                  src="/Mine.png"
+                  src="/Madhu.jpeg"
                   alt="Madhan Mohan Reddy Peram"
                   className="w-36 h-36 rounded-full object-cover bg-transparent shadow-lg scale-110"
-                  key="mine"
+                  style={{ objectPosition: 'center 25%' }}
+                  key="madhu"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -236,19 +224,6 @@ const Hero = () => {
         {/* Desktop Profile Picture - Replaced Avatar component */}
         <div className="hidden md:block absolute top-1/2 right-20 lg:right-32 transform -translate-y-1/2 z-10">
           <div className="relative">
-            {/* Animated Glow Effect */}
-            <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl"
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 0.8, 0.5]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
 
             {/* Animated White Circle */}
             <motion.div
@@ -303,10 +278,11 @@ const Hero = () => {
             >
               <AnimatePresence mode="wait">
                 <motion.img
-                  src="/Mine.png"
+                  src="/Madhu.jpeg"
                   alt="Madhan Mohan Reddy Peram"
                   className="w-72 h-72 rounded-full object-cover bg-transparent shadow-2xl scale-110"
-                  key="mine"
+                  style={{ objectPosition: 'center 25%' }}
+                  key="madhu"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
