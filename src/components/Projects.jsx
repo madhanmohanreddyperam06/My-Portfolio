@@ -46,18 +46,19 @@ const Projects = () => {
     },
     {
       title:
-        "Campus Finder - Smart Educational Institution Discovery Platform using GenAI",
+        "Campus Finder - Smart Educational Institution Discovery Platform using Gen AI",
       description:
-        "An advanced educational platform that revolutionizes self-paced learning through AI-powered content organization and generation. StudySphere allows users to curate and structure courses on any topic with intelligent assistance, automatically generating customized flashcards, comprehensive notes, and interactive quizzes tailored to individual learning preferences. The integration with Google Gemini API enables sophisticated content summarization and knowledge extraction, creating a personalized learning experience that adapts to users' comprehension levels and learning styles.",
+        "A comprehensive Generative AI based web application built with Next.js that serves as a one-stop-shop for discovering and evaluating educational institutions across India. This platform is designed to empower students and parents with the data they need to make informed decisions about their educational future.",
       tech: ["React", "Next.js", "Generative AI", "TailwindCSS", "TypeScript"],
       image: "/images/studysphere-preview.png",
       liveLink: "",
       githubLink: "https://github.com/madhanmohanreddyperam06/Campus-Finder.git",
       highlights: [
-        "Automatic flashcards & notes generation",
-        "On-the-fly quizzes",
-        "AI-powered content summarization",
-        "Self-paced, structured learning",
+        "Role-based Access Control : Admin & User roles with different permissions",
+        "Comprehensive Search : Users can search for thousands of institutions by name, location, or course",
+        "Detailed Institution Profiles: Every institution has a rich profile page featuring courses, fees, placements, and campus infrastructure.",
+        "Advanced Filtering: Narrow down results by filtering based on institution type, state, city, NIRF Ranking, and NAAC Grade.",
+        "AI-powered features : College Recommendation Engine, AI Career Guide LLM, AI Institution Comparison Tool",
       ],
     },
     {

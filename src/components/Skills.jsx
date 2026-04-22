@@ -44,7 +44,7 @@ const Skills = () => {
   const categories = [
     {
       name: "Programming Languages",
-      skills: ["Python", "Java"],
+      skills: ["Python", "Java", "TypeScript", "JavaScript"],
     },
     {
       name: "Frontend",
@@ -52,8 +52,6 @@ const Skills = () => {
         "React",
         "Next.js",
         "Angular",
-        "TypeScript",
-        "JavaScript",
         "HTML",
         "CSS",
         "Tailwind CSS",

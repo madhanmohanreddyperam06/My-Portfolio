@@ -66,10 +66,11 @@ const Experience = () => {
       duration: "Aug 2025 - Dec 2025",
       location: "Remote",
       responsibilities: [
-        "Assisted in development of customer-facing web applications",
-        "Participated in daily stand-ups and sprint planning",
-        "Fixed bugs and implemented new features based on user feedback",
-        "Collaborated with UI/UX team to improve user experience",
+        "Completed comprehensive Full Stack Development training under the guidance of experienced industry mentors.",
+        "Gained hands-on experience by consistently working on daily tasks and real-world assignments.",
+        "Developed strong skills in both frontend and backend technologies, including project structuring and deployment.",
+        "Successfully designed and implemented a full stack project, applying end-to-end development practices.",
+        "Enhanced problem-solving, debugging, and teamwork abilities through practical learning and mentorship support.",
       ],
       technologies: [
         "Angular",
@@ -92,14 +93,14 @@ const Experience = () => {
     },
     {
       company: "Future Interns",
-      position: "Full Stack Web Developer",
+      position: "Full Stack Web Developer Intern",
       duration: "Sep 2025 - Oct 2025",
       location: "Remote",
       responsibilities: [
-        "Developed and maintained RESTful APIs for web applications",
-        "Implemented responsive design principles across all projects",
-        "Worked with Agile methodology to deliver projects on time",
-        "Integrated third-party services and payment gateways",
+        "Completed a Full Stack Web Developer internship at Future Interns, gaining practical industry exposure.",
+        "Worked on both frontend and backend technologies, building dynamic and responsive web applications.",
+        "Developed and deployed multiple real-world projects, applying full stack development concepts end-to-end.",
+        "Strengthened skills in API integration, database management, and UI/UX design.",
       ],
       technologies: [
         "React",
@@ -114,7 +115,7 @@ const Experience = () => {
         issuer: "Future Interns",
         date: "October 2025",
         image: null,
-        pdf: "/Full Stack Developer.pdf",
+        pdf: "/Future Interns Certificate.pdf",
         description: "Recognition for exceptional performance as a Full Stack Web Developer, showcasing expertise in modern web technologies and successful project delivery."
       }
     },
@@ -124,10 +125,11 @@ const Experience = () => {
       duration: "May 2025 - June 2025",
       location: "Remote",
       responsibilities: [
-        "Led development of enterprise web applications using React and Node.js",
-        "Mentored junior developers and conducted code reviews",
-        "Optimized application performance, reducing load time by 40%",
-        "Collaborated with cross-functional teams to deliver scalable solutions",
+        "Completed an AI Developer Internship at Viswam AI, working on real-world LLM development tasks.",
+        "Collected, curated, and maintained domain-specific corpora on a daily basis to support model training.",
+        "Performed fine-tuning of Large Language Models (LLMs) using the prepared datasets to improve performance and relevance.",
+        "Built and tested custom LLM-based solutions, applying NLP and machine learning techniques.",
+        "Successfully completed all assigned tasks, demonstrating skills in data preprocessing, model training, and iterative improvement.",
       ],
       technologies: ["Python", "Streamlit", "Ruff", "Ollama", "GitLab"],
       certificate: {
@@ -135,7 +137,7 @@ const Experience = () => {
         issuer: "Viswam AI",
         date: "June 2025",
         image: null,
-        pdf: "/AI_Developer.pdf",
+        pdf: "/Viswam_AI Certificate.pdf",
         description: "Certificate of excellence for AI Development Internship, recognizing contributions to AI-powered applications and innovative solutions in artificial intelligence."
       }
     },

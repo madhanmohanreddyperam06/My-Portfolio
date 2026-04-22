@@ -151,7 +151,19 @@ const Hero = () => {
 
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 lg:ml-28 lg:mr-auto">
         {/* Mobile Profile Picture - Only visible on mobile */}
-        <div className="flex justify-center mb-6 md:hidden">
+        <div className="flex flex-col items-center mb-6 md:hidden">
+          {/* MY PORTFOLIO Tag - Mobile Only */}
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <span className="text-xs font-semibold text-light tracking-widest uppercase border border-light border-opacity-30 px-3 py-1 rounded-full">
+              MY PORTFOLIO
+            </span>
+          </motion.div>
+
           <div className="relative">
 
             {/* Animated White Circle */}

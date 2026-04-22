@@ -19,7 +19,7 @@ const Education = () => {
       period: "Percentage : 84.2%",
     },
     {
-      institution: "Swamy Vivekananda H S, Cuddapah, Andhra Pradesh | 2019-2020",
+      institution: "Swamy Vivekananda High School, Cuddapah, Andhra Pradesh | 2019-2020",
       degree: "Class X",
       field: "SSC",
       period: "Percentage : 99.3%",
@@ -31,7 +31,7 @@ const Education = () => {
     "Finalist in National Level Hackathon -IBM",
     "Certified Full Stack Developer -Matrimony.com",
     "Certified Full Stack Web Developer -Future Interns",
-    "Certified AI Developer Intern -Viswam AI",
+    "Certified AI Developer -Viswam AI",
     "Secured 89 Percentile in JEE MAINS",
     "Achieved 17463 Rank in EAPCET",
     "Published an IEEE article at ICISS 2026 -Smart College Helpdesk Assistant using Machine Learning & NLP",
