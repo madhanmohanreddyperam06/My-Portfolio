@@ -2,8 +2,7 @@ import { useEffect } from "react";
 
 export default function ResumeRedirect() {
   useEffect(() => {
-    const resumeUrl = import.meta.env.VITE_RESUME_URL
-    window.location.href = resumeUrl;
+    window.location.href = "/Resume_Mine.pdf";
   }, []);
 
   return (

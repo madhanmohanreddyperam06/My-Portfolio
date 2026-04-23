@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Avatar from './Avatar'; // Added import
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Avatar from "./Avatar"; // Added import
 
 const DottedText = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopIndex, setLoopIndex] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
@@ -13,7 +13,7 @@ const DottedText = () => {
       "Frontend Developer",
       "Backend Developer",
       "Full Stack Developer",
-      "AI Engineer"
+      "AI Engineer",
     ];
     const currentRole = roles[loopIndex % roles.length];
 
@@ -36,7 +36,7 @@ const DottedText = () => {
         if (text.length === 0) {
           // Finished deleting, move to next role
           setIsDeleting(false);
-          setLoopIndex(prev => prev + 1);
+          setLoopIndex((prev) => prev + 1);
           setTypingSpeed(150); // Normal typing speed
         } else {
           setTypingSpeed(50); // Faster deleting speed
@@ -71,18 +71,17 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-
   const formatTime = (date) => {
-    return date.toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: false
+    return date.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
     });
   };
 
   const formatDate = (date) => {
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
   };
@@ -93,16 +92,15 @@ const Hero = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const childVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
-
 
   return (
     <section
@@ -153,42 +151,31 @@ const Hero = () => {
         {/* Mobile Profile Picture - Only visible on mobile */}
         <div className="flex flex-col items-center mb-6 md:hidden">
           {/* MY PORTFOLIO Tag - Mobile Only */}
-          <motion.div
-            className="mb-12"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <span className="text-xs font-semibold text-light tracking-widest uppercase border border-light border-opacity-30 px-3 py-1 rounded-full">
-              MY PORTFOLIO
-            </span>
-          </motion.div>
 
           <div className="relative">
-
             {/* Animated White Circle */}
             <motion.div
               className="absolute inset-0 rounded-full border border-white/30"
               animate={{
                 rotate: 360,
-                scale: [1, 1.05, 1]
+                scale: [1, 1.05, 1],
               }}
               transition={{
                 rotate: {
                   duration: 20,
                   repeat: Infinity,
-                  ease: "linear"
+                  ease: "linear",
                 },
                 scale: {
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                  ease: "easeInOut",
+                },
               }}
               whileHover={{
                 borderColor: "rgba(255, 255, 255, 0.8)",
                 scale: 1.1,
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
             />
 
@@ -199,7 +186,7 @@ const Hero = () => {
               animate={{
                 opacity: 1,
                 y: 0,
-                scale: [1, 1.02, 1]
+                scale: [1, 1.02, 1],
               }}
               transition={{
                 duration: 1,
@@ -207,12 +194,12 @@ const Hero = () => {
                 scale: {
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                  ease: "easeInOut",
+                },
               }}
               whileHover={{
                 scale: 1.08,
-                boxShadow: "0 10px 30px rgba(34, 197, 94, 0.3)"
+                boxShadow: "0 10px 30px rgba(34, 197, 94, 0.3)",
               }}
             >
               <AnimatePresence mode="wait">
@@ -220,7 +207,7 @@ const Hero = () => {
                   src="/Madhu.jpeg"
                   alt="Madhan Mohan Reddy Peram"
                   className="w-36 h-36 rounded-full object-cover bg-transparent shadow-lg scale-110"
-                  style={{ objectPosition: 'center 25%' }}
+                  style={{ objectPosition: "center 25%" }}
                   key="madhu"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -236,30 +223,29 @@ const Hero = () => {
         {/* Desktop Profile Picture - Replaced Avatar component */}
         <div className="hidden md:block absolute top-1/2 right-20 lg:right-32 transform -translate-y-1/2 z-10">
           <div className="relative">
-
             {/* Animated White Circle */}
             <motion.div
               className="absolute inset-0 rounded-full border border-white/30"
               animate={{
                 rotate: 360,
-                scale: [1, 1.05, 1]
+                scale: [1, 1.05, 1],
               }}
               transition={{
                 rotate: {
                   duration: 20,
                   repeat: Infinity,
-                  ease: "linear"
+                  ease: "linear",
                 },
                 scale: {
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                  ease: "easeInOut",
+                },
               }}
               whileHover={{
                 borderColor: "rgba(255, 255, 255, 0.8)",
                 scale: 1.1,
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
             />
 
@@ -270,7 +256,7 @@ const Hero = () => {
               animate={{
                 opacity: 1,
                 y: 0,
-                scale: [1, 1.02, 1]
+                scale: [1, 1.02, 1],
               }}
               transition={{
                 duration: 1,
@@ -279,13 +265,13 @@ const Hero = () => {
                 scale: {
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                  ease: "easeInOut",
+                },
               }}
               whileHover={{
                 scale: 1.05,
                 rotate: 2,
-                boxShadow: "0 15px 40px rgba(34, 197, 94, 0.4)"
+                boxShadow: "0 15px 40px rgba(34, 197, 94, 0.4)",
               }}
             >
               <AnimatePresence mode="wait">
@@ -293,7 +279,7 @@ const Hero = () => {
                   src="/Madhu.jpeg"
                   alt="Madhan Mohan Reddy Peram"
                   className="w-72 h-72 rounded-full object-cover bg-transparent shadow-2xl scale-110"
-                  style={{ objectPosition: 'center 25%' }}
+                  style={{ objectPosition: "center 25%" }}
                   key="madhu"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -408,7 +394,10 @@ const Hero = () => {
               </a>
             </motion.div>
 
-            <motion.div variants={childVariants} className="flex flex-wrap gap-5">
+            <motion.div
+              variants={childVariants}
+              className="flex flex-wrap gap-5"
+            >
               <a href="#projects" className="nothing-btn red-line-hover group">
                 VIEW PROJECTS
                 <svg
@@ -427,7 +416,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="/HCL_Resume.pdf"
+                href="/Resume_Mine.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nothing-btn red-line-hover"

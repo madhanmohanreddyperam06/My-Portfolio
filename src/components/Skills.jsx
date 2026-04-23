@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -7,38 +7,38 @@ const Skills = () => {
 
   // Mapping of skill names to their image files
   const skillImages = {
-    "React": "/react.png",
+    React: "/react.png",
     "Next.js": "/Next.js.png",
-    "Angular": "/angular.png",
-    "TypeScript": "/typescript.png",
-    "JavaScript": "/javascript.png",
-    "HTML": "/html.png",
-    "CSS": "/css.png",
+    Angular: "/angular.png",
+    TypeScript: "/typescript.png",
+    JavaScript: "/javascript.png",
+    HTML: "/html.png",
+    CSS: "/css.png",
     "Tailwind CSS": "/tailwind css.png",
     "Node.js": "/nodejs.png",
     "Express.js": "/express.js.png",
-    "Python": "/python.gif",
+    Python: "/python.gif",
     "REST APIs": "/rest-api.png",
-    "WebSockets": "/web sockets.png",
-    "NumPy": "/numpy.png",
-    "Pandas": "/pandas.png",
-    "Tensorflow": "/tensorflow.png",
+    WebSockets: "/web sockets.png",
+    NumPy: "/numpy.png",
+    Pandas: "/pandas.png",
+    Tensorflow: "/tensorflow.png",
     "scikit-learn": "/scikit-learn.png",
-    "Matplotlib": "/matplotlib.png",
-    "MySQL": "/mysql.png",
-    "SQLite": "/SQLite.png",
-    "Git": "/git.png",
-    "GitHub": "/github.png",
+    Matplotlib: "/matplotlib.png",
+    MySQL: "/mysql.png",
+    SQLite: "/SQLite.png",
+    Git: "/git.png",
+    GitHub: "/github.png",
     "VS Code": "/visual-studio-code.png",
-    "Vercel": "/vercel.png",
-    "OpenAI": "/openAI.png",
-    "Claude": "/Claude.png",
+    Vercel: "/vercel.png",
+    OpenAI: "/openAI.png",
+    Claude: "/Claude.png",
     "Google Gemini API": "/gemini-ai.png",
-    "Java": "/java.gif",
-    "Flask": "/Flask.png",
-    "Streamlit": "/streamlit.png",
-    "Django": "/django.png",
-    "AWS": "/aws.png"
+    Java: "/java.gif",
+    Flask: "/Flask.png",
+    Streamlit: "/streamlit.png",
+    Django: "/django.png",
+    AWS: "/aws.png",
   };
 
   const categories = [
@@ -48,14 +48,7 @@ const Skills = () => {
     },
     {
       name: "Frontend",
-      skills: [
-        "React",
-        "Next.js",
-        "Angular",
-        "HTML",
-        "CSS",
-        "Tailwind CSS",
-      ],
+      skills: ["React", "Next.js", "Angular", "HTML", "CSS", "Tailwind CSS"],
     },
     {
       name: "Backend",
@@ -67,13 +60,7 @@ const Skills = () => {
     },
     {
       name: "Machine Learning",
-      skills: [
-        "NumPy",
-        "Pandas",
-        "Tensorflow",
-        "scikit-learn",
-        "Matplotlib",
-      ],
+      skills: ["NumPy", "Pandas", "Tensorflow", "scikit-learn", "Matplotlib"],
     },
     {
       name: "Frameworks",
@@ -93,9 +80,7 @@ const Skills = () => {
     },
     {
       name: "Cloud",
-      skills: [
-        "AWS",
-      ],
+      skills: ["AWS"],
     },
   ];
 
@@ -104,14 +89,14 @@ const Skills = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   return (
@@ -124,7 +109,9 @@ const Skills = () => {
           className="mb-12"
         >
           <h4 className="font-serif text-sm text-muted mb-2">EXPERTISE</h4>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-wider">TECHNICAL SKILLS</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-wider">
+            TECHNICAL SKILLS
+          </h2>
           <div className="w-16 h-[2px] bg-light opacity-50"></div>
         </motion.div>
 
@@ -152,7 +139,7 @@ const Skills = () => {
                     whileHover={{
                       y: -2,
                       backgroundColor: "rgba(245, 245, 245, 0.05)",
-                      transition: { duration: 0.2 }
+                      transition: { duration: 0.2 },
                     }}
                   >
                     {skillImages[skill] && (
@@ -177,10 +164,17 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="mb-6 md:mb-0">
-            <h3 className="text-lg sm:text-xl font-medium mb-2">Ready to collaborate?</h3>
-            <p className="text-sm sm:text-base text-muted">Let's discuss how my skills can help your project.</p>
+            <h3 className="text-lg sm:text-xl font-medium mb-2">
+              Ready to collaborate?
+            </h3>
+            <p className="text-sm sm:text-base text-muted">
+              Let's discuss how my skills can help your project.
+            </p>
           </div>
-          <a href="#contact" className="px-6 py-2 rounded-sm font-medium transition-all duration-300 bg-light text-primary hover:bg-opacity-90 whitespace-nowrap">
+          <a
+            href="#contact"
+            className="px-6 py-2 rounded-sm font-medium transition-all duration-300 bg-light text-primary hover:bg-opacity-90 whitespace-nowrap"
+          >
             Get in Touch
             <span className="ml-2">→</span>
           </a>

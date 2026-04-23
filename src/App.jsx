@@ -16,8 +16,8 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => setLoading(false), 2000);
+    // Simulate loading time - fixed to 8 seconds for the cinematic intro
+    const timer = setTimeout(() => setLoading(false), 8000);
     return () => clearTimeout(timer);
   }, []);
 
