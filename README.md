@@ -9,7 +9,7 @@
 <br>
 
 <div align="center">
-  <a href="https://your-portfolio-url.vercel.app" target="_blank">
+  <a href="https://my-portfolio-zeta-nine-aicbsij1wf.vercel.app" target="_blank">
     <img src="https://img.shields.io/badge/Live Preview-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Preview" />
   </a>
   <a href="https://github.com/madhanmohanreddyperam06/My-Portfolio" target="_blank">
@@ -166,7 +166,7 @@ src/
 
 - 📧 **Email**: [madhanmohanreddyperam06@gmail.com](mailto:madhanmohanreddyperam06@gmail.com)
 - 📱 **Mobile**: [+91 9110395993](tel:+919110395993)
-- 🌐 **Portfolio**: [Live Demo](https://your-portfolio-url.vercel.app)
+- 🌐 **Portfolio**: [Live Demo](https://my-portfolio-zeta-nine-aicbsij1wf.vercel.app)
 
 The contact form is powered by [EmailJS](https://www.emailjs.com/). Configure your EmailJS credentials in the `.env` file to enable the contact functionality.
 
