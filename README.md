@@ -10,7 +10,7 @@
 
 <div align="center">
   <a href="https://your-portfolio-url.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/Live Preview-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Preview" />
+    <img src="https://my-portfolio-zeta-nine-aicbsij1wf.vercel.app?_vercel_share=C11J49CVTxNLbdHqYeSNIizX9JdKpFWE" alt="Live Preview" />
   </a>
   <a href="https://github.com/madhanmohanreddyperam06/My-Portfolio" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
