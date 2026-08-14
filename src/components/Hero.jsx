@@ -204,7 +204,7 @@ const Hero = () => {
             >
               <AnimatePresence mode="wait">
                 <motion.img
-                  src="/Mine.png"
+                  src="/Madhanu.jpeg"
                   alt="Madhan Mohan Reddy Peram"
                   className="w-36 h-36 rounded-full object-cover bg-transparent shadow-lg scale-110"
                   style={{ objectPosition: "center 25%" }}
@@ -276,7 +276,7 @@ const Hero = () => {
             >
               <AnimatePresence mode="wait">
                 <motion.img
-                  src="/Mine.png"
+                  src="/Madhanu.jpeg"
                   alt="Madhan Mohan Reddy Peram"
                   className="w-72 h-72 rounded-full object-cover bg-transparent shadow-2xl scale-110"
                   style={{ objectPosition: "center 25%" }}
