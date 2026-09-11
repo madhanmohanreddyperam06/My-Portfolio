@@ -11,21 +11,21 @@ const Education = () => {
         "Kalasalingam University, Krishnankoil, Tamil Nadu | 2022-2026",
       degree: "B.Tech -",
       field: "Computer Science and Engineering (AI & ML)",
-      period: "CGPA : 8.14",
+      period: "CGPA : 8.25/10",
     },
     {
       institution:
         "Narayana Junior College, Cuddapah, Andhra Pradesh | 2020-2022",
       degree: "Class XII",
       field: "MPC",
-      period: "Percentage : 84.2%",
+      period: "Percentage : 84.20/100",
     },
     {
       institution:
         "Swamy Vivekananda High School, Cuddapah, Andhra Pradesh | 2019-2020",
       degree: "Class X",
       field: "SSC",
-      period: "Percentage : 99.3%",
+      period: "Percentage : 99.33/100",
     },
   ];
 
