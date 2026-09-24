@@ -276,7 +276,7 @@ const Hero = () => {
             >
               <AnimatePresence mode="wait">
                 <motion.img
-                  src="/Madhanu.jpeg"
+                  src="/Final.png"
                   alt="Madhan Mohan Reddy Peram"
                   className="w-72 h-72 rounded-full object-cover bg-transparent shadow-2xl scale-110"
                   style={{ objectPosition: "center 25%" }}
