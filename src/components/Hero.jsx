@@ -222,73 +222,44 @@ const Hero = () => {
         {/* Main container for hero content */}
         {/* Desktop Profile Picture - Replaced Avatar component */}
         <div className="hidden md:block absolute top-1/2 right-20 lg:right-32 transform -translate-y-1/2 z-10">
-          <div className="relative">
-            {/* Animated White Circle */}
-            <motion.div
-              className="absolute inset-0 rounded-full border border-white/30"
-              animate={{
-                rotate: 360,
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                rotate: {
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear",
-                },
-                scale: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                },
-              }}
-              whileHover={{
-                borderColor: "rgba(255, 255, 255, 0.8)",
-                scale: 1.1,
-                transition: { duration: 0.3 },
-              }}
-            />
-
-            {/* Profile Image with Fade Animation */}
-            <motion.div
-              className="relative w-72 h-72"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                scale: [1, 1.02, 1],
-              }}
-              transition={{
-                duration: 1,
-                type: "spring",
-                delay: 0.5,
-                scale: {
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                },
-              }}
-              whileHover={{
-                scale: 1.05,
-                rotate: 2,
-                boxShadow: "0 15px 40px rgba(34, 197, 94, 0.4)",
-              }}
-            >
-              <AnimatePresence mode="wait">
-                <motion.img
-                  src="/Final.png"
-                  alt="Madhan Mohan Reddy Peram"
-                  className="w-72 h-72 rounded-full object-cover bg-transparent shadow-2xl scale-110"
-                  style={{ objectPosition: "center 25%" }}
-                  key="madhu"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                />
-              </AnimatePresence>
-            </motion.div>
-          </div>
+          <motion.div
+            className="relative w-72 h-72"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              scale: [1, 1.02, 1],
+            }}
+            transition={{
+              duration: 1,
+              type: "spring",
+              delay: 0.5,
+              scale: {
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
+            }}
+            whileHover={{
+              scale: 1.05,
+              rotate: 2,
+              boxShadow: "0 15px 40px rgba(34, 197, 94, 0.4)",
+            }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.img
+                src="/Final.png"
+                alt="Madhan Mohan Reddy Peram"
+                className="w-72 h-72 rounded-full object-cover bg-transparent shadow-2xl scale-110"
+                style={{ objectPosition: "center 25%" }}
+                key="madhu"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              />
+            </AnimatePresence>
+          </motion.div>
         </div>
         <div className="text-left">
           <motion.div
