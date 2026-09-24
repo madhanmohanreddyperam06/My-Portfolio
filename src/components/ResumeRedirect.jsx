@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function ResumeRedirect() {
   useEffect(() => {
-    window.location.href = "/Resume_Mine.pdf";
+    window.location.href = "/Peram_Madhan_Mohan_Reddy_Resume_.pdf";
   }, []);
 
   return (

@@ -387,7 +387,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="/Resume_Mine.pdf"
+                href="/Peram_Madhan_Mohan_Reddy_Resume_.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nothing-btn red-line-hover"
