@@ -351,17 +351,17 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://www.guvi.in/madhanmohanreddyperam0678058"
+                href="https://leetcode.com/u/madhanmohanreddyperam06/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted hover:text-light transition-colors"
               >
                 <img
-                  src="/GUVI.png"
-                  alt="GUVI Logo"
-                  className="w-6 h-6 rounded"
+                  src="/LeetCode.png"
+                  alt="LeetCode Logo"
+                  className="w-6 h-6 object-contain"
                 />
-                GUVI
+                LEETCODE
               </a>
             </motion.div>
 

@@ -7,6 +7,7 @@ import Hero from './components/Hero.jsx';
 import Projects from './components/Projects.jsx';
 import Skills from './components/Skills.jsx';
 import Education from './components/Education.jsx';
+import LeetCodeAnalytics from './components/LeetCodeAnalytics.jsx';
 import Experience from './components/Experience.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
@@ -44,6 +45,7 @@ function App() {
                   <main>
                     <Hero />
                     <Education />
+                    <LeetCodeAnalytics />
                     <Skills />
                     <Experience />
                     <Projects />
