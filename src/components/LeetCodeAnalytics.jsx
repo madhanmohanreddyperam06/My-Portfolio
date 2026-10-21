@@ -16,15 +16,15 @@ const INITIAL_STATS = {
   totalSubmissions: 17,
   acceptanceRate: "76.47%",
 };
-
+  
 const SKILL_TAGS = [
-  { name: "Dynamic Programming", level: "Advanced", count: 1, color: "text-purple-400 border-purple-500/30 bg-purple-500/10" },
-  { name: "Math", level: "Intermediate", count: 4, color: "text-amber-400 border-amber-500/30 bg-amber-500/10" },
-  { name: "Bit Manipulation", level: "Intermediate", count: 3, color: "text-amber-400 border-amber-500/30 bg-amber-500/10" },
-  { name: "Hash Table", level: "Intermediate", count: 2, color: "text-amber-400 border-amber-500/30 bg-amber-500/10" },
-  { name: "Array", level: "Fundamental", count: 7, color: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10" },
-  { name: "Two Pointers", level: "Fundamental", count: 4, color: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10" },
-  { name: "String", level: "Fundamental", count: 3, color: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10" },
+  { name: "Dynamic Programming", level: "Advanced", count: 1 },
+  { name: "Math", level: "Intermediate", count: 4 },
+  { name: "Bit Manipulation", level: "Intermediate", count: 3 },
+  { name: "Hash Table", level: "Intermediate", count: 2 },
+  { name: "Array", level: "Fundamental", count: 7 },
+  { name: "Two Pointers", level: "Fundamental", count: 4 },
+  { name: "String", level: "Fundamental", count: 3 },
 ];
 
 const LeetCodeAnalytics = () => {
@@ -104,12 +104,12 @@ const LeetCodeAnalytics = () => {
   return (
     <section
       id="leetcode"
-      className="section-padding bg-[#0c0c0c] relative overflow-hidden border-t border-b border-light/10 font-serif"
+      className="section-padding bg-[#0c0c0c] relative overflow-hidden border-t border-b border-white/10 font-serif"
       style={{ fontFamily: '"Times New Roman", Times, serif' }}
     >
-      {/* Subtle ambient background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FFA116]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+      {/* Subtle ambient monochrome background glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-white/[0.015] rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10" ref={ref}>
         {/* Header Block */}
@@ -120,18 +120,18 @@ const LeetCodeAnalytics = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3 mb-2">
-              <h4 className="font-serif text-sm text-muted uppercase tracking-wider">
+              <h4 className="font-serif text-sm text-neutral-400 uppercase tracking-wider">
                 PROGRAMMING
               </h4>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs bg-white/5 border border-white/10 text-muted">
-                <span className={`w-1.5 h-1.5 rounded-full ${isLive ? "bg-emerald-400 animate-pulse" : "bg-[#FFA116]"}`} />
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs bg-white/5 border border-white/10 text-neutral-300">
+                <span className={`w-1.5 h-1.5 rounded-full ${isLive ? "bg-white animate-pulse" : "bg-neutral-500"}`} />
                 {isLive ? "Live Synced" : "Verified Profile"}
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider text-accent flex items-center gap-3 font-serif">
+            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white flex items-center gap-3 font-serif">
               LEETCODE ANALYTICS
             </h2>
-            <div className="w-16 h-[2px] bg-light opacity-50 mt-4"></div>
+            <div className="w-16 h-[2px] bg-neutral-500 mt-4"></div>
           </motion.div>
 
           {/* Profile Quick Action */}
@@ -145,18 +145,18 @@ const LeetCodeAnalytics = () => {
               href="https://leetcode.com/u/madhanmohanreddyperam06/"
               target="_blank"
               rel="noopener noreferrer"
-              className="nothing-btn red-line-hover group flex items-center gap-3 bg-secondary/80 backdrop-blur-md px-5 py-2.5"
+              className="nothing-btn red-line-hover group flex items-center gap-3 bg-secondary/80 backdrop-blur-md px-5 py-2.5 rounded-xl border border-white/10"
             >
               <img
                 src="/LeetCode.png"
                 alt="LeetCode Logo"
-                className="w-5 h-5 object-contain"
+                className="w-5 h-5 object-contain grayscale opacity-85 group-hover:opacity-100 transition-opacity"
               />
-              <span className="text-xs tracking-wider text-light group-hover:text-white transition-colors">
+              <span className="text-xs tracking-wider text-neutral-300 group-hover:text-white transition-colors">
                 @madhanmohanreddyperam06
               </span>
               <svg
-                className="w-4 h-4 ml-1 text-muted group-hover:text-light group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                className="w-4 h-4 ml-1 text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -177,16 +177,16 @@ const LeetCodeAnalytics = () => {
           {/* Card 1: Solved Questions & Circular Radial Meter (5 Cols) */}
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-5 bg-secondary/70 backdrop-blur-md border border-light/10 p-6 md:p-8 rounded-sm relative flex flex-col justify-between"
+            className="lg:col-span-5 bg-secondary/70 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-xl relative flex flex-col justify-between"
           >
-            <div className="flex items-center justify-between pb-6 border-b border-light/10">
+            <div className="flex items-center justify-between pb-6 border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-2.5 h-2.5 bg-[#FFA116] rounded-full"></div>
-                <h3 className="text-sm tracking-widest text-light uppercase font-bold">
+                <div className="w-2.5 h-2.5 bg-white/80 rounded-full"></div>
+                <h3 className="text-sm tracking-widest text-white uppercase font-bold">
                   Solved Problems
                 </h3>
               </div>
-              <span className="text-xs text-muted">
+              <span className="text-xs text-neutral-400">
                 {stats.totalSolved} / {stats.totalQuestions} Questions
               </span>
             </div>
@@ -202,43 +202,43 @@ const LeetCodeAnalytics = () => {
                     cy="80"
                     r={radius}
                     fill="none"
-                    stroke="#222"
+                    stroke="#222222"
                     strokeWidth="12"
                   />
-                  {/* Easy Arc */}
+                  {/* Easy Arc - Bright White */}
                   <circle
                     cx="80"
                     cy="80"
                     r={radius}
                     fill="none"
-                    stroke="#00B8A3"
+                    stroke="#ffffff"
                     strokeWidth="12"
                     strokeDasharray={`${easyStroke} ${circumference}`}
                     strokeDashoffset="0"
                     strokeLinecap="round"
                     className="transition-all duration-1000"
                   />
-                  {/* Medium Arc */}
+                  {/* Medium Arc - Medium Grey */}
                   <circle
                     cx="80"
                     cy="80"
                     r={radius}
                     fill="none"
-                    stroke="#FFC01E"
+                    stroke="#a3a3a3"
                     strokeWidth="12"
                     strokeDasharray={`${mediumStroke} ${circumference}`}
                     strokeDashoffset={-easyStroke}
                     strokeLinecap="round"
                     className="transition-all duration-1000"
                   />
-                  {/* Hard Arc */}
+                  {/* Hard Arc - Dark Grey */}
                   {hardStroke > 0 && (
                     <circle
                       cx="80"
                       cy="80"
                       r={radius}
                       fill="none"
-                      stroke="#FF375F"
+                      stroke="#525252"
                       strokeWidth="12"
                       strokeDasharray={`${hardStroke} ${circumference}`}
                       strokeDashoffset={-(easyStroke + mediumStroke)}
@@ -252,7 +252,7 @@ const LeetCodeAnalytics = () => {
                   <span className="text-3xl font-bold text-white tracking-tight">
                     {stats.totalSolved}
                   </span>
-                  <span className="text-[11px] text-muted uppercase tracking-wider">
+                  <span className="text-[11px] text-neutral-400 uppercase tracking-wider">
                     Total Solved
                   </span>
                 </div>
@@ -263,17 +263,17 @@ const LeetCodeAnalytics = () => {
                 {/* Easy */}
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-[#00B8A3] font-medium flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#00B8A3]" /> Easy
+                    <span className="text-white font-medium flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-white" /> Easy
                     </span>
-                    <span className="text-light">
+                    <span className="text-neutral-300">
                       <span className="font-bold text-white">{stats.easySolved}</span>
-                      <span className="text-muted"> / {stats.totalEasy}</span>
+                      <span className="text-neutral-400"> / {stats.totalEasy}</span>
                     </span>
                   </div>
-                  <div className="w-full bg-black/40 h-1.5 rounded-full overflow-hidden">
+                  <div className="w-full bg-black/50 h-1.5 rounded-full overflow-hidden border border-white/5">
                     <div
-                      className="h-full bg-[#00B8A3] rounded-full transition-all duration-1000"
+                      className="h-full bg-white rounded-full transition-all duration-1000"
                       style={{ width: `${Math.max(6, (stats.easySolved / stats.totalEasy) * 100 * 5)}%` }}
                     />
                   </div>
@@ -282,17 +282,17 @@ const LeetCodeAnalytics = () => {
                 {/* Medium */}
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-[#FFC01E] font-medium flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#FFC01E]" /> Medium
+                    <span className="text-neutral-300 font-medium flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-neutral-400" /> Medium
                     </span>
-                    <span className="text-light">
+                    <span className="text-neutral-300">
                       <span className="font-bold text-white">{stats.mediumSolved}</span>
-                      <span className="text-muted"> / {stats.totalMedium}</span>
+                      <span className="text-neutral-400"> / {stats.totalMedium}</span>
                     </span>
                   </div>
-                  <div className="w-full bg-black/40 h-1.5 rounded-full overflow-hidden">
+                  <div className="w-full bg-black/50 h-1.5 rounded-full overflow-hidden border border-white/5">
                     <div
-                      className="h-full bg-[#FFC01E] rounded-full transition-all duration-1000"
+                      className="h-full bg-neutral-400 rounded-full transition-all duration-1000"
                       style={{ width: `${Math.max(4, (stats.mediumSolved / stats.totalMedium) * 100 * 15)}%` }}
                     />
                   </div>
@@ -301,17 +301,17 @@ const LeetCodeAnalytics = () => {
                 {/* Hard */}
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-[#FF375F] font-medium flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#FF375F]" /> Hard
+                    <span className="text-neutral-400 font-medium flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-neutral-600" /> Hard
                     </span>
-                    <span className="text-light">
+                    <span className="text-neutral-300">
                       <span className="font-bold text-white">{stats.hardSolved}</span>
-                      <span className="text-muted"> / {stats.totalHard}</span>
+                      <span className="text-neutral-400"> / {stats.totalHard}</span>
                     </span>
                   </div>
-                  <div className="w-full bg-black/40 h-1.5 rounded-full overflow-hidden">
+                  <div className="w-full bg-black/50 h-1.5 rounded-full overflow-hidden border border-white/5">
                     <div
-                      className="h-full bg-[#FF375F] rounded-full transition-all duration-1000"
+                      className="h-full bg-neutral-600 rounded-full transition-all duration-1000"
                       style={{ width: `${stats.hardSolved > 0 ? (stats.hardSolved / stats.totalHard) * 100 : 0}%` }}
                     />
                   </div>
@@ -319,9 +319,9 @@ const LeetCodeAnalytics = () => {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-light/10 flex items-center justify-between text-xs text-muted">
+            <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-neutral-400">
               <span>Overall Accuracy</span>
-              <span className="text-emerald-400 font-semibold">{stats.acceptanceRate}</span>
+              <span className="text-white font-semibold">{stats.acceptanceRate}</span>
             </div>
           </motion.div>
 
@@ -332,66 +332,66 @@ const LeetCodeAnalytics = () => {
           >
             {/* 4 Quick Stat Tiles */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-secondary/70 backdrop-blur-md border border-light/10 p-4 rounded-sm">
-                <span className="text-[11px] text-muted uppercase tracking-wider block mb-1">
+              <div className="bg-secondary/70 backdrop-blur-md border border-white/10 p-4 rounded-xl">
+                <span className="text-[11px] text-neutral-400 uppercase tracking-wider block mb-1">
                   Submissions
                 </span>
                 <span className="text-2xl font-bold text-white block">
                   {stats.totalSubmissions}
                 </span>
-                <span className="text-[12px] text-emerald-400 block mt-1">
+                <span className="text-[12px] text-neutral-400 block mt-1">
                   {stats.totalSolved} Accepted
                 </span>
               </div>
 
-              <div className="bg-secondary/70 backdrop-blur-md border border-light/10 p-4 rounded-sm">
-                <span className="text-[11px] text-muted uppercase tracking-wider block mb-1">
+              <div className="bg-secondary/70 backdrop-blur-md border border-white/10 p-4 rounded-xl">
+                <span className="text-[11px] text-neutral-400 uppercase tracking-wider block mb-1">
                   Primary Lang
                 </span>
-                <span className="text-2xl font-bold text-[#FFA116] block">
+                <span className="text-2xl font-bold text-white block">
                   Java
                 </span>
-                <span className="text-[12px] text-muted block mt-1">
+                <span className="text-[12px] text-neutral-400 block mt-1">
                   100% Solutions
                 </span>
               </div>
 
-              <div className="bg-secondary/70 backdrop-blur-md border border-light/10 p-4 rounded-sm">
-                <span className="text-[11px] text-muted uppercase tracking-wider block mb-1">
+              <div className="bg-secondary/70 backdrop-blur-md border border-white/10 p-4 rounded-xl">
+                <span className="text-[11px] text-neutral-400 uppercase tracking-wider block mb-1">
                   Contribution
                 </span>
                 <span className="text-2xl font-bold text-white block">
                   {stats.contributionPoint}+
                 </span>
-                <span className="text-[12px] text-muted block mt-1">
+                <span className="text-[12px] text-neutral-400 block mt-1">
                   Community Points
                 </span>
               </div>
 
-              <div className="bg-secondary/70 backdrop-blur-md border border-light/10 p-4 rounded-sm">
-                <span className="text-[11px] text-muted uppercase tracking-wider block mb-1">
+              <div className="bg-secondary/70 backdrop-blur-md border border-white/10 p-4 rounded-xl">
+                <span className="text-[11px] text-neutral-400 uppercase tracking-wider block mb-1">
                   Global Rank
                 </span>
                 <span className="text-xl font-bold text-white truncate block">
                   Top Tier
                 </span>
-                <span className="text-[12px] text-amber-400 block mt-1">
+                <span className="text-[12px] text-neutral-400 block mt-1">
                   Active Solver
                 </span>
               </div>
             </div>
 
             {/* Skill Domains Card */}
-            <div className="bg-secondary/70 backdrop-blur-md border border-light/10 p-6 rounded-sm flex-1 flex flex-col justify-between">
+            <div className="bg-secondary/70 backdrop-blur-md border border-white/10 p-6 rounded-xl flex-1 flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between pb-4 border-b border-light/10 mb-4">
+                <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-light/70 rounded-full" />
-                    <h4 className="text-xs tracking-widest text-light uppercase font-bold">
+                    <div className="w-2 h-2 bg-white/80 rounded-full" />
+                    <h4 className="text-xs tracking-widest text-white uppercase font-bold">
                       Topic & Algorithmic Proficiency
                     </h4>
                   </div>
-                  <span className="text-xs text-muted">
+                  <span className="text-xs text-neutral-400">
                     LeetCode Skill Graph
                   </span>
                 </div>
@@ -400,10 +400,10 @@ const LeetCodeAnalytics = () => {
                   {SKILL_TAGS.map((skill) => (
                     <div
                       key={skill.name}
-                      className={`border px-3.5 py-1.5 rounded-sm text-xs flex items-center gap-2 ${skill.color} transition-all duration-300 hover:scale-105`}
+                      className="border border-white/10 bg-white/[0.04] text-neutral-300 hover:text-white hover:border-white/25 hover:bg-white/[0.08] px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-2 transition-all duration-300 hover:scale-105"
                     >
                       <span className="font-medium">{skill.name}</span>
-                      <span className="text-[11px] px-1.5 py-0.2 bg-black/40 rounded-full opacity-80">
+                      <span className="text-[11px] px-1.5 py-0.5 bg-white/10 text-neutral-400 rounded-md">
                         ×{skill.count}
                       </span>
                     </div>
@@ -411,16 +411,16 @@ const LeetCodeAnalytics = () => {
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-light/10 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-muted gap-3">
+              <div className="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-neutral-400 gap-3">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                  <span className="w-2 h-2 rounded-full bg-neutral-400" />
                   <span>Core Focus: Algorithms, Dynamic Programming & Data Structures</span>
                 </div>
                 <a
                   href="https://leetcode.com/u/madhanmohanreddyperam06/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="nothing-btn red-line-hover text-xs tracking-wider flex items-center gap-2 text-light hover:text-white"
+                  className="nothing-btn red-line-hover text-xs tracking-wider flex items-center gap-2 text-neutral-300 hover:text-white px-3 py-1.5 rounded-lg border border-white/10"
                 >
                   VISIT LEETCODE PROFILE
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
