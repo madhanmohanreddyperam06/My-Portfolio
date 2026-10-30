@@ -37,14 +37,57 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    "Home",
-    "Education",
-    "LeetCode",
-    "Skills",
-    "Experience",
-    "Projects",
-    "Contact",
+    { name: "Home", id: "home", mobileName: "Home" },
+    { name: "Education", id: "education", mobileName: "Education" },
+    { name: "LeetCode", id: "leetcode", mobileName: "Programming" },
+    { name: "Skills", id: "skills", mobileName: "Skills" },
+    { name: "Experience", id: "experience", mobileName: "Experience" },
+    { name: "Projects", id: "projects", mobileName: "Projects" },
+    { name: "Contact", id: "contact", mobileName: "Contact" },
   ];
+
+  const handleNavClick = (e, targetId) => {
+    if (e) {
+      e.preventDefault();
+    }
+    setMobileMenuOpen(false);
+
+    const scrollToTarget = () => {
+      if (targetId === "home") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        window.history.pushState(null, "", "#home");
+        return;
+      }
+
+      const element =
+        document.getElementById(targetId) ||
+        (targetId === "programming"
+          ? document.getElementById("leetcode")
+          : null) ||
+        (targetId === "leetcode"
+          ? document.getElementById("programming")
+          : null);
+
+      if (element) {
+        const headerOffset = 70;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        window.history.pushState(null, "", `#${targetId}`);
+      }
+    };
+
+    scrollToTarget();
+    setTimeout(scrollToTarget, 150);
+  };
 
   const headerVariants = {
     initial: { y: -100 },
@@ -95,17 +138,18 @@ const Header = () => {
             <ul className="flex space-x-8">
               {navItems.map((item, i) => (
                 <motion.li
-                  key={item}
+                  key={item.id}
                   custom={i}
                   variants={navItemVariants}
                   initial="hidden"
                   animate="visible"
                 >
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${item.id}`}
+                    onClick={(e) => handleNavClick(e, item.id)}
                     className="text-sm font-medium hover:text-light transition-colors duration-300"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </motion.li>
               ))}
@@ -161,17 +205,19 @@ const Header = () => {
                 <ul className="flex flex-col divide-y divide-light/5">
                   {navItems.map((item, index) => (
                     <motion.li
-                      key={item}
+                      key={item.id}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.03, duration: 0.2 }}
                     >
                       <a
-                        href={`#${item.toLowerCase()}`}
-                        className="flex items-center justify-between py-3 text-sm font-medium text-light/80 hover:text-white transition-colors duration-200"
-                        onClick={() => setMobileMenuOpen(false)}
+                        href={`#${item.id}`}
+                        className="flex items-center justify-between py-3.5 text-sm font-medium text-light/85 hover:text-white transition-colors duration-200 cursor-pointer active:text-white"
+                        onClick={(e) => handleNavClick(e, item.id)}
                       >
-                        <span className="tracking-wide">{item}</span>
+                        <span className="tracking-wide">
+                          {item.mobileName}
+                        </span>
                         <span className="text-xs text-muted font-mono">
                           0{index + 1}
                         </span>

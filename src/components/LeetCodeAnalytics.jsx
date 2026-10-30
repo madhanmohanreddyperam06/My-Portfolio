@@ -107,6 +107,7 @@ const LeetCodeAnalytics = () => {
       className="section-padding bg-[#0c0c0c] relative overflow-hidden border-t border-b border-white/10 font-serif"
       style={{ fontFamily: '"Times New Roman", Times, serif' }}
     >
+      <div id="programming" className="sr-only" aria-hidden="true" />
       {/* Subtle ambient monochrome background glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-white/[0.015] rounded-full blur-3xl pointer-events-none" />
@@ -132,38 +133,6 @@ const LeetCodeAnalytics = () => {
               LEETCODE ANALYTICS
             </h2>
             <div className="w-16 h-[2px] bg-neutral-500 mt-4"></div>
-          </motion.div>
-
-          {/* Profile Quick Action */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-4"
-          >
-            <a
-              href="https://leetcode.com/u/madhanmohanreddyperam06/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nothing-btn leetcode-line-hover group flex items-center gap-3 bg-[#FFA116]/[0.06] hover:bg-[#FFA116]/[0.12] backdrop-blur-md px-5 py-2.5 rounded-xl border border-[#FFA116]/35 hover:border-[#FFA116] transition-all duration-300 shadow-[0_0_15px_rgba(255,161,22,0.06)] hover:shadow-[0_0_20px_rgba(255,161,22,0.2)]"
-            >
-              <img
-                src="/LeetCode.png"
-                alt="LeetCode Logo"
-                className="w-5 h-5 object-contain transition-transform group-hover:scale-110 duration-300"
-              />
-              <span className="text-xs tracking-wider text-neutral-200 group-hover:text-[#FFA116] transition-colors">
-                @madhanmohanreddyperam06
-              </span>
-              <svg
-                className="w-4 h-4 ml-1 text-[#FFA116]/80 group-hover:text-[#FFA116] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
           </motion.div>
         </div>
 
@@ -211,7 +180,7 @@ const LeetCodeAnalytics = () => {
                     cy="80"
                     r={radius}
                     fill="none"
-                    stroke="#00B8A3"
+                    stroke="#2CBB5D"
                     strokeWidth="12"
                     strokeDasharray={`${easyStroke} ${circumference}`}
                     strokeDashoffset="0"
@@ -238,7 +207,7 @@ const LeetCodeAnalytics = () => {
                       cy="80"
                       r={radius}
                       fill="none"
-                      stroke="#FF375F"
+                      stroke="#EF4743"
                       strokeWidth="12"
                       strokeDasharray={`${hardStroke} ${circumference}`}
                       strokeDashoffset={-(easyStroke + mediumStroke)}
@@ -263,8 +232,8 @@ const LeetCodeAnalytics = () => {
                 {/* Easy */}
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-[#00B8A3] font-medium flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#00B8A3]" /> Easy
+                    <span className="text-[#2CBB5D] font-medium flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-[#2CBB5D]" /> Easy
                     </span>
                     <span className="text-neutral-300">
                       <span className="font-bold text-white">{stats.easySolved}</span>
@@ -273,7 +242,7 @@ const LeetCodeAnalytics = () => {
                   </div>
                   <div className="w-full bg-black/50 h-1.5 rounded-full overflow-hidden border border-white/5">
                     <div
-                      className="h-full bg-[#00B8A3] rounded-full transition-all duration-1000"
+                      className="h-full bg-[#2CBB5D] rounded-full transition-all duration-1000"
                       style={{ width: `${Math.max(6, (stats.easySolved / stats.totalEasy) * 100 * 5)}%` }}
                     />
                   </div>
@@ -301,8 +270,8 @@ const LeetCodeAnalytics = () => {
                 {/* Hard */}
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-[#FF375F] font-medium flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#FF375F]" /> Hard
+                    <span className="text-[#EF4743] font-medium flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-[#EF4743]" /> Hard
                     </span>
                     <span className="text-neutral-300">
                       <span className="font-bold text-white">{stats.hardSolved}</span>
@@ -311,7 +280,7 @@ const LeetCodeAnalytics = () => {
                   </div>
                   <div className="w-full bg-black/50 h-1.5 rounded-full overflow-hidden border border-white/5">
                     <div
-                      className="h-full bg-[#FF375F] rounded-full transition-all duration-1000"
+                      className="h-full bg-[#EF4743] rounded-full transition-all duration-1000"
                       style={{ width: `${stats.hardSolved > 0 ? (stats.hardSolved / stats.totalHard) * 100 : 0}%` }}
                     />
                   </div>
@@ -411,7 +380,7 @@ const LeetCodeAnalytics = () => {
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-neutral-400 gap-3">
+              <div className="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-neutral-400 gap-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-neutral-400" />
                   <span>Core Focus: Algorithms, Dynamic Programming & Data Structures</span>
@@ -420,11 +389,28 @@ const LeetCodeAnalytics = () => {
                   href="https://leetcode.com/u/madhanmohanreddyperam06/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="nothing-btn leetcode-line-hover text-xs tracking-wider flex items-center gap-2 text-neutral-300 hover:text-[#FFA116] px-3.5 py-1.5 rounded-lg border border-[#FFA116]/30 hover:border-[#FFA116] transition-colors"
+                  className="nothing-btn leetcode-line-hover group flex items-center gap-3 bg-[#FFA116]/[0.06] hover:bg-[#FFA116]/[0.12] backdrop-blur-md px-5 py-2.5 rounded-2xl border border-[#FFA116]/35 hover:border-[#FFA116] transition-all duration-300 shadow-[0_0_15px_rgba(255,161,22,0.06)] hover:shadow-[0_0_20px_rgba(255,161,22,0.2)] shrink-0"
                 >
-                  VISIT LEETCODE PROFILE
-                  <svg className="w-3.5 h-3.5 text-[#FFA116]/80 group-hover:text-[#FFA116]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  <img
+                    src="/LeetCode.png"
+                    alt="LeetCode Logo"
+                    className="w-5 h-5 object-contain transition-transform group-hover:scale-110 duration-300"
+                  />
+                  <span className="text-xs tracking-wider text-neutral-200 group-hover:text-[#FFA116] transition-colors font-serif">
+                    @madhanmohanreddyperam06
+                  </span>
+                  <svg
+                    className="w-4 h-4 ml-1 text-[#FFA116]/80 group-hover:text-[#FFA116] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
                   </svg>
                 </a>
               </div>

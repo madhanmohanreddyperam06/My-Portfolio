@@ -2,64 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Avatar from "./Avatar"; // Added import
 
-const DottedText = () => {
-  const [text, setText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [loopIndex, setLoopIndex] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
-
-  useEffect(() => {
-    const roles = [
-      "Frontend Developer",
-      "Backend Developer",
-      "Full Stack Developer",
-      "AI Engineer",
-    ];
-    const currentRole = roles[loopIndex % roles.length];
-
-    const handleTyping = () => {
-      if (!isDeleting) {
-        // Typing
-        setText(currentRole.substring(0, text.length + 1));
-
-        if (text.length === currentRole.length) {
-          // Finished typing, pause then start deleting
-          setTypingSpeed(2000); // 2 second pause
-          setIsDeleting(true);
-        } else {
-          setTypingSpeed(150); // Normal typing speed
-        }
-      } else {
-        // Deleting
-        setText(currentRole.substring(0, text.length - 1));
-
-        if (text.length === 0) {
-          // Finished deleting, move to next role
-          setIsDeleting(false);
-          setLoopIndex((prev) => prev + 1);
-          setTypingSpeed(150); // Normal typing speed
-        } else {
-          setTypingSpeed(50); // Faster deleting speed
-        }
-      }
-    };
-
-    const timer = setTimeout(handleTyping, typingSpeed);
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, loopIndex, typingSpeed]);
-
-  return (
-    <div className="font-serif">
-      <span>{text}</span>
-      <motion.span
-        animate={{ opacity: [1, 0] }}
-        transition={{ duration: 0.5, repeat: Infinity }}
-        className="inline-block w-1 h-6 bg-light ml-1"
-      />
-    </div>
-  );
-};
-
 const Hero = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -284,8 +226,8 @@ const Hero = () => {
               <div className="nothing-headline font-serif tracking-wide text-2xl sm:text-3xl md:text-5xl">
                 MADHAN MOHAN REDDY PERAM
               </div>
-              <div className="mt-3 text-gradient text-lg sm:text-xl md:text-2xl">
-                <DottedText />
+              <div className="mt-3 text-gradient text-lg sm:text-xl md:text-2xl font-serif">
+                Developer
               </div>
             </motion.h1>
 
