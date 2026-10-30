@@ -44,10 +44,19 @@ const Contact = () => {
     const now = new Date();
     const formattedDate = now.toISOString().replace("T", " ").substring(0, 19);
 
-    // EmailJS configuration from environment variables
-    const serviceId = import.meta.env.VITE_SERVICE_ID;
-    const templateId = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+    // EmailJS configuration with production/deployment fallbacks
+    const serviceId =
+      import.meta.env.VITE_SERVICE_ID ||
+      import.meta.env.VITE_EMAILJS_SERVICE_ID ||
+      "service_z9inuic";
+    const templateId =
+      import.meta.env.VITE_TEMPLATE_ID ||
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID ||
+      "template_cjmnlzl";
+    const publicKey =
+      import.meta.env.VITE_PUBLIC_KEY ||
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY ||
+      "hhMiycuybhPQ-aU8S";
 
     // Initialize EmailJS
     emailjs.init(publicKey);
@@ -64,7 +73,7 @@ const Contact = () => {
     };
 
     emailjs
-      .send(serviceId, templateId, templateParams)
+      .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log("Email sent successfully:", response);
         setStatus({ submitting: false, submitted: true, error: null });
@@ -76,10 +85,13 @@ const Contact = () => {
       })
       .catch((error) => {
         console.error("Failed to send email:", error);
+        const errorMsg =
+          (typeof error === "string" ? error : error?.text || error?.message) ||
+          "Failed to send message. Please try again.";
         setStatus({
           submitting: false,
           submitted: false,
-          error: "Failed to send message. Please try again.",
+          error: errorMsg,
         });
       });
   };
